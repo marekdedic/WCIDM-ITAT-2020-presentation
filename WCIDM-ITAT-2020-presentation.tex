@@ -22,6 +22,7 @@
 \setmainfont{TeX Gyre Termes}
 \usetheme{Boadilla}
 \usecolortheme{crane}
+\setbeamertemplate{title page}[default][rounded=true,shadow=false]
 \setbeamertemplate{section in toc}[ball unnumbered]
 \setbeamertemplate{bibliography item}{}
 
@@ -46,7 +47,7 @@
 }
 
 \newdate{presentation}{21}{09}{2020}
-\date[ITAT 2020]{\displaydate{presentation}}
+\date[ITAT 2020]{ITAT 2020, \displaydate{presentation}}
 
 \author[Marek Dědič]
 {
@@ -126,7 +127,6 @@
 \section{Contrastive predictive coding}
 
 \begin{frame}{Contrastive predictive coding}
-	%Clustering metrics TODO
 	The approach based on Contrastive Predictive Coding is represented with the loss function \( L_\mathrm{CPC} \):
 	\[ \mathmat{D}_{ij} = \left\lVert \phi \left( B_i^{(1)} \right) - \phi \left( B_j^{(2)} \right) \right\rVert_2^2 \]
 	\[ L_\mathrm{CPC} = \frac{1}{n} \sum_{i = 1}^n \left( \log \left( \mathmat{D}_{ii} \right) - \log \sum_{\substack{j = 1 \\ j \neq i}}^n \mathmat{D}_{ij} \right) \]
