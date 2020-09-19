@@ -313,3 +313,5 @@ tags
 [._]*.un~
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,latex
+
+WCIDM-ITAT-2020-presentation.pdf
