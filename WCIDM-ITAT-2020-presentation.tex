@@ -135,17 +135,17 @@
 \section{Triplet loss}
 
 \begin{frame}{Triplet loss}
-	Triplet loss is a \textbf{supervised} alternative:
+	Triplet loss is a supervised alternative:
 	\[ \mathmat{y}_{ij} =
-\begin{cases}
-	1 &\text{for} \quad y_i = y_j \\
-	0 &\text{otherwise}
-\end{cases}
-\]
-\[ \mathmat{\eta}_{ij} = \begin{cases}
+		\begin{cases}
+			1 &\text{for} \quad y_i = y_j \\
+			0 &\text{otherwise}
+		\end{cases}
+	\]
+	\[ \mathmat{\eta}_{ij} = \begin{cases}
 		1 &\text{if the bag } B_j \text{ is a target neighbour of the bag } B_i \\
 		0 &\text{otherwise}
-  \end{cases} \]
+	\end{cases} \]
 	\[ L_\mathrm{triplet} = \sum_{ij} \eta_{ij} \mathmat{D}_{ij} + c \sum_{ijl} \eta_{ij} \left( 1 - \mathmat{y}_{il} \right) \max \left( 0, 1 + \mathmat{D}_{ij} - \mathmat{D}_{il} \right) \]
 \end{frame}
 
@@ -184,82 +184,82 @@
 \section{Results on public datasets}
 
 \begin{frame}{Publicly available datasets}
-  \begin{figure}
-  \centering
-  \begin{subfigure}[t]{0.38\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{images/Musk2_ratio/Musk2_ratio.pdf}
-    \caption{Musk2}
-  \end{subfigure}
-  \begin{subfigure}[t]{0.38\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{images/UCSBBreastCancer_ratio/UCSBBreastCancer_ratio.pdf}
-    \caption{UCSBBreastCancer}
-  \end{subfigure}
-  \begin{subfigure}[t]{0.38\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{images/Web3_ratio/Web3_ratio.pdf}
-    \caption{Web3}
-  \end{subfigure}
-  \caption{The Silhouette coefficient on three selected datasets.}
-\end{figure}
+	\begin{figure}
+		\centering
+		\begin{subfigure}[t]{0.38\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{images/Musk2_ratio/Musk2_ratio.pdf}
+			\caption{Musk2}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.38\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{images/UCSBBreastCancer_ratio/UCSBBreastCancer_ratio.pdf}
+			\caption{UCSBBreastCancer}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.38\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{images/Web3_ratio/Web3_ratio.pdf}
+			\caption{Web3}
+		\end{subfigure}
+		\caption{The Silhouette coefficient on three selected datasets.}
+	\end{figure}
 \end{frame}
 
 \begin{frame}{Publicly available datasets}
-  \begin{table}[h!]
-  \centering
-	\resizebox{!}{0.39\textheight}{%
-  \begin{tabular}{lrrr}
-    \toprule
-    Dataset          & CPC            & Triplet loss   & Magnet loss \\
-    \midrule
-    BrownCreeper     & \textbf{0.900} & 0.882          & \textbf{0.900} \\
-    Elephant         & 0.575          & \textbf{0.900} & 0.825 \\
-    Fox              & 0.400          & 0.675          & \textbf{0.725} \\
-    Musk1            & 0.667          & \textbf{0.889} & \textbf{0.889} \\
-    Musk2            & 0.750          & \textbf{0.950} & \textbf{0.950} \\
-    Mutagenesis1     & 0.658          & 0.816          & \textbf{0.912} \\
-    Mutagenesis2     & 0.708          & \textbf{1.000} & \textbf{1.000} \\
-    Newsgroups1      & 0.533          & 0.950          & \textbf{1.000} \\
-    Newsgroups2      & 0.600          & 0.900          & \textbf{0.950} \\
-    Newsgroups3      & 0.683          & 0.700          & \textbf{0.850} \\
-    Protein          & 0.820          & \textbf{0.923} & 0.897 \\
-    Tiger            & 0.642          & \textbf{0.825} & \textbf{0.825} \\
-    UCSBBreastCancer & 0.333          & 0.667          & \textbf{1.000} \\
-    Web1             & 0.667          & 0.733          & \textbf{0.800} \\
-    Web2             & 0.689          & \textbf{0.800} & 0.733 \\
-    Web3             & 0.733          & 0.800          & \textbf{1.000} \\
-    Web4             & 0.622          & 0.800          & \textbf{0.930} \\
-    WinterWren       & 0.936          & \textbf{0.955} & 0.936 \\
-    \bottomrule
-  \end{tabular}%
-}
-  \caption{The accuracy of a kNN classifier in the representation space}
-  \end{table}
+	\begin{table}[h!]
+		\centering
+		\resizebox{!}{0.39\textheight}{%
+			\begin{tabular}{lrrr}
+				\toprule
+				Dataset          & CPC            & Triplet loss   & Magnet loss \\
+				\midrule
+				BrownCreeper     & \textbf{0.900} & 0.882          & \textbf{0.900} \\
+				Elephant         & 0.575          & \textbf{0.900} & 0.825 \\
+				Fox              & 0.400          & 0.675          & \textbf{0.725} \\
+				Musk1            & 0.667          & \textbf{0.889} & \textbf{0.889} \\
+				Musk2            & 0.750          & \textbf{0.950} & \textbf{0.950} \\
+				Mutagenesis1     & 0.658          & 0.816          & \textbf{0.912} \\
+				Mutagenesis2     & 0.708          & \textbf{1.000} & \textbf{1.000} \\
+				Newsgroups1      & 0.533          & 0.950          & \textbf{1.000} \\
+				Newsgroups2      & 0.600          & 0.900          & \textbf{0.950} \\
+				Newsgroups3      & 0.683          & 0.700          & \textbf{0.850} \\
+				Protein          & 0.820          & \textbf{0.923} & 0.897 \\
+				Tiger            & 0.642          & \textbf{0.825} & \textbf{0.825} \\
+				UCSBBreastCancer & 0.333          & 0.667          & \textbf{1.000} \\
+				Web1             & 0.667          & 0.733          & \textbf{0.800} \\
+				Web2             & 0.689          & \textbf{0.800} & 0.733 \\
+				Web3             & 0.733          & 0.800          & \textbf{1.000} \\
+				Web4             & 0.622          & 0.800          & \textbf{0.930} \\
+				WinterWren       & 0.936          & \textbf{0.955} & 0.936 \\
+				\bottomrule
+			\end{tabular}%
+		}
+		\caption{The accuracy of a kNN classifier in the representation space}
+	\end{table}
 \end{frame}
 
 \section{Results on a corporate dataset}
 
 \begin{frame}{Model for second-level domains}
-  \begin{figure}
-  \centering
-	\includegraphics[width=\textwidth]{images/URL-model/URL-model.pdf}
-  \end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{images/URL-model/URL-model.pdf}
+	\end{figure}
 \end{frame}
 
 \begin{frame}{Corporate dataset results}
-  \begin{table}
-  \centering
-  \begin{tabular}{lrrr}
-    \toprule
-    Variant    & CPC   & Triplet loss & Magnet loss \\
-    \midrule
-    2 classes  & 0.920 & 0.910        & \textbf{0.930} \\
-    20 classes & 0.893 & 0.868        & \textbf{0.904} \\
-    \bottomrule
-  \end{tabular}
-  \caption{The accuracy of a kNN classifier in the representation space}
-\end{table}
+	\begin{table}
+		\centering
+		\begin{tabular}{lrrr}
+			\toprule
+			Variant    & CPC   & Triplet loss & Magnet loss \\
+			\midrule
+			2 classes  & 0.920 & 0.910        & \textbf{0.930} \\
+			20 classes & 0.893 & 0.868        & \textbf{0.904} \\
+			\bottomrule
+		\end{tabular}
+		\caption{The accuracy of a kNN classifier in the representation space}
+	\end{table}
 \end{frame}
 
 \section{Conclusion}
